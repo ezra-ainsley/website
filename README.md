@@ -1,5 +1,5 @@
-# website
+# Website
+A personal website to experiment with web development.
 
-Website at https://website.streetzero.eu
-
-have some problems
+## Link
+https://website.streetzero.eu
