@@ -1,0 +1,116 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8); /* default background */
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* make sure background image is behind other elements */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  border-bottom: 1px solid #555;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px; /* added this line */
+  margin: 0;
+}
+
+h1, h2, h3, p {
+  font-weight: bold;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.hero-name {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);                /* larger than the default h1 */
+  font-weight: 900;               /* extra‑bold for impact */
+  margin: 0;                      /* remove default margins */
+  padding: 0.5rem 0;              /* vertical breathing room */
+  color: #fff;                    /* stay readable on dark bg */
+  text-align: left;               /* not centered */
+}
+
+/* If you want a slight accent (optional) */
+.hero-name::after {
+  content: "";
+  display: block;
+  width: 60px;                    /* length of the accent line */
+  height: 4px;
+  background: #ffeb3b;            /* bright accent colour */
+  margin-top: 0.2rem;
+} 
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 6px 12px;            /* give the link some internal space */
+  border-radius: 4px;           /* rounded corners for the highlight */
+  transition: background-color 0.25s ease,
+              color 0.25s ease,
+              box-shadow 0.25s ease;   /* smooth animation */
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);   /* semi‑transparent white */
+  color: #ffeb3b;                               /* optional: change text colour */
+  box-shadow: 0 0 8px 2px rgba(255,255,255,0.4);/* subtle glow */
+}
+
+/* Optional: active/focus state for keyboard navigation */
+nav a:focus,
+nav a:active {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}               
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+  margin-top: -40px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+footer {
+  position: fixed; /* kept the same */
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* added this line to make it transparent */
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  header { padding: 8px 12px; }
+  .hero-name { font-size: 1.8rem; }
+}
